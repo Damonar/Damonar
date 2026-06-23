@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="--neon-blue: #00f0ff; --neon-pink: #ff007f; --header-font: 'Orbitron',sans-serif; --title-font: 'Orbitron',sans-serif; --body-font: 'Rajdhani',sans-serif; --eyebrow-size: 18px; --title-size: 30px; --body-size: 18px; --lead-size: 21px; --line-height: 1.54; --text-align: justify; --heading-align: left; --content-width: 100%; --title-color: #ffffff; --heading-color: #00f0ff; --body-color: #c2cbd9; --caption-color: #7d8aa0; --media-radius: 16px; --block-radius: 16px; --logo-size: 19px;"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Surge Presets — Damon Armani</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="" defer=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<style id="fontImportStyle">
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;700&display=swap');
+</style>
+<style>
+:root{
+    --bg-color:#02000a;--neon-pink:#ff007f;--neon-purple:#9d00ff;--neon-blue:#00f0ff;
+    --glass-bg:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.08);
+    --glass-blur:10px;--block-radius:16px;--media-radius:16px;
+    --header-font:'Orbitron',sans-serif;--title-font:'Orbitron',sans-serif;--body-font:'Rajdhani',sans-serif;
+    --text-main:#f1f5f9;--text-muted:#9aa8bd;
+    --title-color:#ffffff;--body-color:#c2cbd9;--heading-color:#00f0ff;--caption-color:#7d8aa0;
+    --eyebrow-size:13px;--title-size:42px;--body-size:18px;--lead-size:21px;--logo-size:22px;
+    --content-width:100%;--line-height:1.85;--text-align:left;--heading-align:left;
+    --bg-mode-opacity:1;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:var(--body-font)}
+html{scroll-behavior:smooth}
+body{background:var(--bg-color);color:var(--text-main);min-height:100vh;overflow-x:hidden;position:relative}
+
+/* ===== BACKGROUND LAYER (Three.js Container) ===== */
+.bg-layer{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;background:radial-gradient(circle at 50% 30%,#0a001a 0%,#030008 85%)}
+#canvas-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;display:block}
+
+/* ===== HEADER / NAV ===== */
+.site-header{width:100%;padding:30px 24px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;max-width:1200px;margin:0 auto}
+.site-logo{font-family:var(--header-font);font-size:var(--logo-size);font-weight:900;letter-spacing:4px;text-transform:uppercase;color:#fff;text-shadow:0 0 18px rgba(0,240,255,.35);text-decoration:none}
+.back-link{display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:14px;text-decoration:none;font-weight:600;letter-spacing:.5px;transition:color .2s}
+.back-link:hover{color:var(--neon-blue)}
+
+/* ===== HERO / FEATURED IMAGE ===== */
+.post-hero{max-width:1200px;margin:10px auto 50px;padding:0 24px;position:relative;z-index:5}
+.post-hero-media{width:100%;aspect-ratio:16/7;border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid rgba(0,240,255,0.12)}
+.post-hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,0,10,0) 40%,rgba(2,0,10,.85) 100%)}
+.post-hero-tagrow{position:absolute;bottom:28px;left:36px;right:36px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.post-tag-chip{font-family:var(--header-font);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:rgba(0,240,255,0.12);border:1px solid rgba(0,240,255,0.3);color:var(--neon-blue)}
+.post-meta-row{display:flex;gap:18px;align-items:center;margin-top:18px;font-size:13px;color:var(--text-muted);flex-wrap:wrap}
+.post-meta-row span{display:flex;align-items:center;gap:6px}
+.post-meta-row i{color:var(--neon-pink)}
+
+/* ===== ARTICLE WRAPPER ===== */
+.post-article{max-width:var(--content-width);margin:0 auto;padding:0 0 80px;position:relative;z-index:5}
+.post-title-block{margin-bottom:24px;padding:0 24px}
+.post-eyebrow{font-family:var(--header-font);font-size:var(--eyebrow-size);color:var(--neon-pink);letter-spacing:4px;text-transform:uppercase;display:block;margin-bottom:14px;text-shadow:0 0 10px rgba(255,0,127,.4)}
+.post-title{font-family:var(--title-font);font-size:var(--title-size);font-weight:900;line-height:1.15;color:var(--title-color);text-transform:uppercase;margin-bottom:28px;letter-spacing:.5px}
+
+/* ===== CONTENT BLOCKS ===== */
+.content-block{text-align:var(--text-align)}
+
+/* Glass Block */
+.text-glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--block-radius);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.block-paragraph{font-size:var(--body-size);line-height:var(--line-height);color:var(--body-color);font-weight:500;white-space:pre-wrap}
+.block-paragraph.is-lead{font-size:var(--lead-size);color:var(--text-main);font-weight:600}
+.block-heading{font-family:var(--title-font);font-weight:800;color:var(--heading-color);text-transform:uppercase;letter-spacing:1px;margin:0 0 8px;text-align:var(--heading-align)}
+
+/* Media blocks */
+.block-image{border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid rgba(0,240,255,0.12)}
+.block-image img{width:100%;display:block;height:auto}
+.block-image-caption{font-size:13px;color:var(--caption-color);text-align:center;margin-top:10px;font-style:italic;letter-spacing:.3px}
+.block-video{border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid rgba(0,240,255,0.12);aspect-ratio:16/9;background:#060314}
+.block-video iframe{width:100%;height:100%;border:none;display:block}
+.block-video-caption{font-size:13px;color:var(--caption-color);text-align:center;margin-top:10px;font-style:italic;letter-spacing:.3px}
+
+/* Isolated quote/highlight text block */
+.block-highlight{background:var(--glass-bg);border:1px solid var(--glass-border);border-left:3px solid var(--neon-blue);border-radius:var(--block-radius);backdrop-filter:blur(var(--glass-blur));-webkit-backdrop-filter:blur(var(--glass-blur));position:relative}
+.block-highlight::before{content:'\201C';font-family:Georgia,serif;font-size:64px;color:rgba(0,240,255,.18);position:absolute;top:-6px;left:18px;line-height:1}
+.block-highlight p{line-height:1.6;color:var(--text-main);font-weight:600;position:relative;z-index:1;white-space:pre-wrap}
+
+/* Divider */
+.block-divider{display:flex;align-items:center;gap:14px;justify-content:center}
+.block-divider span{width:6px;height:6px;border-radius:50%;background:var(--neon-pink);box-shadow:0 0 10px var(--neon-pink)}
+.block-divider::before,.block-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--glass-border),transparent)}
+
+/* ===== LEAD FORM & COMMENTS ===== */
+.lead-form-input{width:100%;padding:14px 20px;background:rgba(0,0,0,0.6);border:1px solid var(--neon-blue);color:#fff;border-radius:8px;outline:none;font-size:16px;font-family:var(--body-font);transition:box-shadow 0.3s;}
+.lead-form-input:focus{box-shadow:0 0 15px rgba(0,240,255,0.3);}
+.lead-form-btn{width:100%;padding:14px 20px;background:linear-gradient(45deg, var(--neon-pink), var(--neon-purple));border:none;color:#fff;font-weight:bold;font-family:var(--header-font);font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:8px;cursor:pointer;transition:all 0.3s;box-shadow:0 0 20px rgba(255,0,127,0.4);}
+.lead-form-btn:hover{transform:translateY(-2px);box-shadow:0 5px 25px rgba(255,0,127,0.6);}
+.lead-form-btn:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
+.lead-dl-btn{display:inline-block;padding:14px 30px;background:var(--neon-blue);color:#000;text-decoration:none;font-family:var(--header-font);font-weight:900;text-transform:uppercase;border-radius:8px;box-shadow:0 0 20px rgba(0,240,255,0.4);letter-spacing:1px;transition:all 0.3s;}
+.lead-dl-btn:hover{transform:translateY(-2px);box-shadow:0 5px 25px rgba(0,240,255,0.6);color:#000;}
+
+.comment-bubble { background:rgba(0,0,0,0.3); border-left:3px solid var(--neon-blue); padding:16px; border-radius:8px; margin-bottom:12px; }
+.comment-meta { display:flex; justify-content:space-between; margin-bottom:8px; align-items:center; }
+.comment-name { font-family:var(--header-font); color:#fff; font-weight:700; font-size:15px; }
+.comment-date { font-size:12px; color:var(--text-muted); }
+.comment-txt { color:var(--body-color); line-height:1.6; font-size:15px; }
+
+/* ===== RELATED POSTS SLIDER ===== */
+.related-section{max-width:100%;margin:0 auto 60px;padding:60px 0 0;position:relative;z-index:5;border-top:1px solid var(--glass-border)}
+.related-title{font-family:var(--header-font);font-size:22px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:36px;color:var(--text-main);padding:0 24px}
+.related-track{display:flex;gap:26px;overflow-x:auto;padding:0 24px 10px;scroll-snap-type:x mandatory}
+.related-track::-webkit-scrollbar{height:6px}
+.related-track::-webkit-scrollbar-thumb{background:var(--neon-blue);border-radius:3px}
+.related-card{flex:0 0 280px;background:rgba(4,2,18,.6);border:1px solid var(--glass-border);border-radius:var(--block-radius);overflow:hidden;transition:all .3s ease;text-decoration:none;scroll-snap-align:start;cursor:pointer;backdrop-filter:blur(5px)}
+.related-card:hover{border-color:var(--neon-blue);box-shadow:0 15px 35px rgba(0,240,255,.18);transform:translateY(-4px)}
+.related-card-media{width:100%;height:160px;background:#09051c;position:relative}
+.related-card-media img{width:100%;height:100%;object-fit:cover}
+.related-card-badge{position:absolute;top:14px;left:14px;background:var(--neon-pink);font-family:var(--header-font);font-size:9px;font-weight:900;padding:3px 9px;border-radius:4px;letter-spacing:1px;box-shadow:0 0 10px var(--neon-pink)}
+.related-card-body{padding:18px}
+.related-card-title{font-family:var(--header-font);font-size:15px;color:#fff;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.related-card-tag{color:var(--neon-blue);font-size:12px;font-weight:600;text-transform:uppercase}
+
+/* ===== FOOTER ===== */
+.post-footer{text-align:center;font-size:12px;color:var(--text-muted);padding:30px 0;font-family:var(--header-font);letter-spacing:1px;border-top:1px solid var(--glass-border)}
+
+/* ===== EDITOR PANEL ===== */
+#elementorToggle{position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:linear-gradient(135deg,var(--neon-pink),var(--neon-purple));border:none;border-radius:50%;color:#fff;font-size:24px;cursor:pointer;z-index:999;box-shadow:0 0 20px var(--neon-pink);display:flex;justify-content:center;align-items:center}
+#customizerPanel{position:fixed;top:0;right:-440px;width:420px;height:100vh;background:rgba(9,5,24,.98);border-left:2px solid var(--neon-blue);backdrop-filter:blur(25px);z-index:998;transition:right .4s cubic-bezier(.16,1,.3,1);padding:20px 16px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,.8)}
+#customizerPanel.open{right:0}
+.panel-section{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.panel-section h3{font-family:'Orbitron',sans-serif;font-size:11px;color:var(--neon-blue);margin-bottom:10px;letter-spacing:1px;text-transform:uppercase}
+.ctrl-group{margin-bottom:10px;display:flex;flex-direction:column;gap:4px}
+.ctrl-group label{font-size:11px;color:#cbd5e1}
+.ctrl-group input[type=range]{-webkit-appearance:none;width:100%;background:#1e1b4b;height:5px;border-radius:3px}
+.ctrl-group input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--neon-pink);cursor:pointer}
+.ctrl-group select,.ctrl-group input[type=text],.ctrl-group textarea,.ctrl-group input[type=color]{background:#1e1b4b;border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:6px;color:#fff;font-size:12px;width:100%}
+.ctrl-group textarea{resize:vertical;min-height:60px;line-height:1.5}
+.ctrl-group input[type=color]{padding:2px 4px;height:32px;cursor:pointer}
+.ctrl-row{display:flex;gap:8px}
+.ctrl-row .ctrl-group{flex:1;margin-bottom:0}
+.btn-action{width:100%;padding:8px;border-radius:6px;border:none;font-weight:bold;cursor:pointer;text-transform:uppercase;font-size:11px;letter-spacing:1px;margin-top:4px}
+.btn-primary{background:var(--neon-blue);color:#000}
+.btn-success{background:var(--neon-pink);color:#fff;box-shadow:0 0 15px var(--neon-pink)}
+.btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.btn-danger{background:rgba(255,0,80,.12);color:#ff6699;border:1px solid rgba(255,0,80,.3)}
+.manager-card-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);padding:7px 10px;border-radius:6px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.manager-card-item span{font-size:11px;font-weight:bold;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.manager-card-actions{display:flex;gap:4px;flex-shrink:0}
+.manager-card-actions button{background:none;border:none;color:#fff;cursor:pointer;padding:2px;font-size:12px}
+.manager-card-actions button:hover{color:var(--neon-blue)}
+.panel-tabs{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}
+.panel-tab{padding:5px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.5);font-family:'Orbitron',sans-serif;font-size:9px;cursor:pointer;transition:all .2s}
+.panel-tab.active{background:var(--neon-blue);color:#000;border-color:var(--neon-blue)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.block-editor-card{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.12);border-radius:8px;padding:10px;margin-bottom:10px}
+.block-editor-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.block-editor-type{font-family:'Orbitron',sans-serif;font-size:9px;color:var(--neon-pink);letter-spacing:1px;text-transform:uppercase}
+.add-block-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.add-block-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:6px;padding:9px 6px;font-size:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all .2s}
+.add-block-btn:hover{border-color:var(--neon-blue);background:rgba(0,240,255,.06)}
+.add-block-btn i{font-size:14px;color:var(--neon-blue)}
+.radio-pill-group{display:flex;gap:6px}
+.radio-pill{flex:1;text-align:center;padding:7px;border-radius:6px;border:1px solid rgba(255,255,255,.12);font-size:10px;cursor:pointer;color:rgba(255,255,255,.6);transition:all .2s}
+.radio-pill.active{background:var(--neon-blue);color:#000;border-color:var(--neon-blue);font-weight:700}
+
+@media(max-width:768px){
+    .post-title{font-size:calc(var(--title-size) * 0.75)}
+    .post-hero-media{aspect-ratio:4/3}
+    .related-card{flex:0 0 240px}
+}
+</style>
+<meta name="description" content=""><meta property="og:title" content="Free Surge Presets — Damon Armani"><meta property="og:description" content=""><meta property="og:image" content="pics/surge-vol1.webp"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"></head>
+<body>
+
+<div class="bg-layer"></div>
+<div id="canvas-container"></div>
+
+<header class="site-header">
+    <a href="#" class="site-logo" id="renderSiteLogo">Damon Armani</a>
+    <a href="#" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Library</a>
+</header>
+
+<section class="post-hero">
+    <div class="post-hero-media" id="postHeroMedia">
+        <img id="postHeroImg" src="pics/surge-vol1.webp" alt="Featured image" fetchpriority="high">
+        <div class="post-hero-overlay"></div>
+        <div class="post-hero-tagrow" id="postHeroTags"><span class="post-tag-chip">Free Presets</span></div>
+    </div>
+</section>
+
+<article class="post-article">
+    <div class="post-title-block">
+        <span class="post-eyebrow" id="postEyebrow">Surge Vol 1 </span>
+        <h1 class="post-title" id="postTitle">Free Surge Presets</h1>
+        <div class="post-meta-row" id="postMetaRow"><span><i class="fa-solid fa-calendar"></i>June 2026</span><span><i class="fa-solid fa-user"></i>Damon Armani</span></div>
+    </div>
+
+    <div id="contentBlocksTrack"><div class="content-block text-glass" data-block-id="1" style="margin-top:0px; margin-bottom:55px; margin-left:0px; margin-right:0px; padding:23px 16px;">
+                <p class="block-paragraph is-lead" style="font-size:16px;">I am so proud to introduce you to my custom preset pack for Surge. If you are looking to spark some new inspiration, you are in the right place. And the best part? Don’t worry. It’s completely free.
+Inside this pack, you will find:
+20 Custom Presets
+5 Unique Wavetables</p>
+            </div><div class="content-block text-glass" data-block-id="2" style="margin-top:0px; margin-bottom:35px; margin-left:0px; margin-right:0px; padding:15px 16px;">
+                <h2 class="block-heading" style="font-size:15px;">Watch the Sounds in Action</h2>
+            </div><div class="content-block text-glass" data-block-id="3" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 21px;">
+                <p class="block-paragraph " style="">Before you dive in, check out the showcase below to hear exactly what these patches can do.</p>
+            </div><div class="content-block" data-block-id="1782164774528" style="margin-top:0px; margin-bottom:38px; width:100%; margin-left:auto; margin-right:auto;">
+                <div class="block-video"><iframe src="https://www.youtube-nocookie.com/embed/ho3tdKUa6gw?rel=0&amp;modestbranding=1&amp;color=white" allowfullscreen=""></iframe></div>
+                <div class="block-video-caption">Surge Vol 1 Video walkthrough </div>
+            </div><div class="content-block text-glass" data-block-id="1782163447877" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:14px 34px;">
+                <h2 class="block-heading" style="font-size:18px;">Now Officially Part of Surge Factory Content!</h2>
+            </div><div class="content-block text-glass" data-block-id="1782163535033" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 24px;">
+                <p class="block-paragraph " style="">This collection is particularly special to me because it was the very first preset pack I ever released for Surge. I am thrilled to say that these patches are now officially included in all new versions of Surge as factory content!
+
+If your synthesizer is up to date, you already have these sounds built right in, so there is no need to download them separately.</p>
+            </div><div class="content-block text-glass" data-block-id="1782163681694" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:19px 19px;">
+                <h2 class="block-heading" style="font-size:20px;">Important Note on Compatibility (Pre-1.6.4)</h2>
+            </div><div class="content-block text-glass" data-block-id="1782163848778" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 24px;">
+                <p class="block-paragraph " style="">Surge is an incredible synth, and its engine has evolved significantly over the years. Because of these underlying changes in the settings across different versions, a few of these original presets might sound slightly altered or "broken" in the newest builds.
+
+However, if for any reason you are still running an older version of Surge (prior to version 1.6.4) and want to test these sounds exactly as they were originally designed, you can easily get them via the form below.</p>
+            </div><div class="content-block text-glass" data-block-id="1782163979190" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:12px 34px;">
+                <h2 class="block-heading" style="font-size:18px;">Future Updates &amp; Send Me Your Music!</h2>
+            </div><div class="content-block text-glass" data-block-id="1782164037513" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 23px;">
+                <p class="block-paragraph " style="">If I get the chance, my goal is to fully update all of these classic presets to match the latest engine and release them alongside a brand-new collection of sounds in the future.
+
+Finally, as a sound designer, nothing makes me happier than hearing my patches come to life. If you end up making music with these presets, I would absolutely love to hear it. Please send your tracks my way!</p>
+            </div><div class="content-block text-glass lead-form-wrapper" data-block-id="10" style="margin-top:20px; margin-bottom:40px; margin-left:0px; margin-right:0px; padding:40px 40px;">
+                <h3 class="block-heading" style="justify-content:center; text-align:center; margin-bottom:24px; font-size:22px;">Unlock Free Bonus Presets</h3>
+                <form onsubmit="submitLeadForm(event, this, 'https://camp.damonarmusic.workers.dev/api/subscribe', 'SurgeVol1')" style="display:flex; flex-direction:column; gap:16px; align-items:center;">
+                    <input type="email" class="lead-form-input" style="max-width:400px;text-align:center;" placeholder="Enter your email..." required="">
+                    <button type="submit" class="lead-form-btn" style="max-width:400px;">Unlock Download</button>
+                </form>
+                <div class="lead-msg" style="text-align:center; font-size:13px; margin-top:14px; font-weight:600;"></div>
+                <div class="lead-result" style="display:none; text-align:center; margin-top:10px;"></div>
+            </div>
+            <div class="content-block text-glass comments-wrapper" data-block-id="1781905771754" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:40px 40px;">
+                <h3 class="block-heading" style="margin-bottom:24px; font-size:24px;"><i class="fa-solid fa-comments" style="margin-right:10px; color:var(--neon-blue);"></i>Comments</h3>
+                
+                <div class="comments-list" id="comments-list-1781905771754" style="margin-bottom:30px; display:flex; flex-direction:column;"><div style="color:var(--text-muted); font-size:14px; text-align:center;">No comments yet. Be the first to share your thoughts!</div></div>
+
+                <div class="comment-form-container" style="border-top:1px solid var(--glass-border); padding-top:25px;">
+                    <h4 style="font-family:var(--heading-font); color:var(--neon-pink); font-size:18px; margin-bottom:15px;">Leave a Reply</h4>
+                    <form onsubmit="submitCommentForm(event, this, 'https://cmman.damonarmusic.workers.dev', 'surge vol1')" style="display:flex; flex-direction:column; gap:15px;">
+                        <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                            <input type="text" name="name" class="lead-form-input" style="flex:1;" placeholder="Your Name" required="">
+                            <input type="email" name="email" class="lead-form-input" style="flex:1;" placeholder="Your Email (Hidden)">
+                        </div>
+                        <textarea name="comment" class="lead-form-input" style="resize:vertical; min-height:100px;" placeholder="Your message..." required=""></textarea>
+                        <div class="turnstile-box" style="margin:10px 0;"><div class="cf-turnstile" data-sitekey="0x4AAAAAADnkwjqyclYJRP97" data-theme="dark"></div></div>
+                        <button type="submit" class="lead-form-btn" style="align-self:flex-start; max-width:200px;">Post Comment</button>
+                        <div class="comment-msg" style="font-size:13px; font-weight:600; margin-top:5px;"></div>
+                    </form>
+                </div>
+            </div></div>
+</article>
+
+<section class="related-section" id="relatedSection">
+    <div class="related-title"><i class="fa-solid fa-wave-square"></i> <span id="relatedTitleText">Related Presets</span></div>
+    <div class="related-track" id="relatedTrack"><a class="related-card" href="#"><div class="related-card-media"><span class="related-card-badge">NEW</span><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Ethereal Atmosphere" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=400&amp;q=80'"></div><div class="related-card-body"><div class="related-card-title">Ethereal Atmosphere</div><div class="related-card-tag">Ambient • Textures</div></div></a><a class="related-card" href="#"><div class="related-card-media"><span class="related-card-badge">POPULAR</span><img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Neon Genesis Lead" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=400&amp;q=80'"></div><div class="related-card-body"><div class="related-card-title">Neon Genesis Lead</div><div class="related-card-tag">Bass • Leads</div></div></a><a class="related-card" href="#"><div class="related-card-media"><span class="related-card-badge">PRO</span><img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Hyperdrive Mod" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=400&amp;q=80'"></div><div class="related-card-body"><div class="related-card-title">Hyperdrive Mod</div><div class="related-card-tag">Arpeggios • Rapid</div></div></a><a class="related-card" href="#"><div class="related-card-media"><span class="related-card-badge">HOT</span><img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&amp;fit=crop&amp;w=400&amp;q=80" alt="Cosmic Horizon" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&amp;fit=crop&amp;w=400&amp;q=80'"></div><div class="related-card-body"><div class="related-card-title">Cosmic Horizon</div><div class="related-card-tag">FX • Space</div></div></a></div>
+</section>
+
+<p class="post-footer">DAMON ARMANI ANALOG ARCHITECTURE © 2026</p>
+
+
+
+
+
+<script>
+const PS={"config":{"colorBlue":"#00f0ff","colorPink":"#ff007f","logoText":"Damon Armani","logoSize":"19","heroImg":"pics/surge-vol1.webp","heroTags":"Free Presets","eyebrow":"Surge Vol 1 ","postTitle":"Free Surge Presets","metaItems":"fa-calendar|June 2026, fa-user|Damon Armani","headerFont":"'Orbitron',sans-serif","titleFont":"'Orbitron',sans-serif","bodyFont":"'Rajdhani',sans-serif","titleSize":"30","bodySize":"18","leadSize":"21","lineHeight":"154","textAlign":"justify","contentWidth":100,"titleColor":"#ffffff","headingColor":"#00f0ff","bodyColor":"#c2cbd9","captionColor":"#7d8aa0","mediaRadius":16,"blockRadius":16,"bgMode":"grid","relatedTitle":"Related Presets","seoDesc":"","seoImage":"","turnstileSiteKey":"0x4AAAAAADnkwjqyclYJRP97","eyebrowSize":"18"},"blocks":[{"id":1,"type":"paragraph","lead":true,"text":"I am so proud to introduce you to my custom preset pack for Surge. If you are looking to spark some new inspiration, you are in the right place. And the best part? Don’t worry. It’s completely free.\nInside this pack, you will find:\n20 Custom Presets\n5 Unique Wavetables","mTop":0,"mBot":55,"pVer":23,"pHor":16,"fSize":16,"mLeft":0},{"id":2,"type":"heading","level":"h2","text":"Watch the Sounds in Action","mTop":0,"mBot":35,"pVer":15,"pHor":16,"fSize":15},{"id":3,"type":"paragraph","lead":false,"text":"Before you dive in, check out the showcase below to hear exactly what these patches can do.","mTop":0,"mBot":38,"pVer":28,"pHor":21},{"id":1782164774528,"type":"video","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"imgWidth":100,"vId":"ho3tdKUa6gw","caption":"Surge Vol 1 Video walkthrough "},{"id":1782163447877,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h2","fSize":18,"pVer":14,"pHor":34,"text":"Now Officially Part of Surge Factory Content!"},{"id":1782163535033,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":24,"text":"This collection is particularly special to me because it was the very first preset pack I ever released for Surge. I am thrilled to say that these patches are now officially included in all new versions of Surge as factory content!\n\nIf your synthesizer is up to date, you already have these sounds built right in, so there is no need to download them separately."},{"id":1782163681694,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h2","fSize":20,"pVer":19,"pHor":19,"text":"Important Note on Compatibility (Pre-1.6.4)"},{"id":1782163848778,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":24,"text":"Surge is an incredible synth, and its engine has evolved significantly over the years. Because of these underlying changes in the settings across different versions, a few of these original presets might sound slightly altered or \"broken\" in the newest builds.\n\nHowever, if for any reason you are still running an older version of Surge (prior to version 1.6.4) and want to test these sounds exactly as they were originally designed, you can easily get them via the form below."},{"id":1782163979190,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h2","fSize":18,"pVer":12,"pHor":34,"text":"Future Updates & Send Me Your Music!"},{"id":1782164037513,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":23,"text":"If I get the chance, my goal is to fully update all of these classic presets to match the latest engine and release them alongside a brand-new collection of sounds in the future.\n\nFinally, as a sound designer, nothing makes me happier than hearing my patches come to life. If you end up making music with these presets, I would absolutely love to hear it. Please send your tracks my way!"},{"id":10,"type":"leadform","formTitle":"Unlock Free Bonus Presets","campaignSlug":"SurgeVol1","workerUrl":"https://camp.damonarmusic.workers.dev/api/subscribe","mTop":20,"mBot":40,"pVer":40,"pHor":40},{"id":1781905771754,"type":"comments","mTop":0,"mBot":38,"sectionTitle":"Comments","postId":"surge vol1","workerUrl":"https://cmman.damonarmusic.workers.dev","pVer":40,"pHor":40}],"related":[{"id":201,"title":"Ethereal Atmosphere","tag":"Ambient • Textures","img":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80","badge":"NEW","link":"#"},{"id":202,"title":"Neon Genesis Lead","tag":"Bass • Leads","img":"https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80","badge":"POPULAR","link":"#"},{"id":203,"title":"Hyperdrive Mod","tag":"Arpeggios • Rapid","img":"https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&w=400&q=80","badge":"PRO","link":"#"},{"id":204,"title":"Cosmic Horizon","tag":"FX • Space","img":"https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=400&q=80","badge":"HOT","link":"#"}]};
+function sc(n,v){document.documentElement.style.setProperty(n,v);}
+function eH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function applyState(){const c=PS.config;sc('--neon-blue',c.colorBlue);sc('--neon-pink',c.colorPink);sc('--header-font',c.headerFont);sc('--title-font',c.titleFont);sc('--body-font',c.bodyFont);sc('--eyebrow-size',(c.eyebrowSize||13)+'px');sc('--title-size',c.titleSize+'px');sc('--body-size',c.bodySize+'px');sc('--lead-size',c.leadSize+'px');sc('--line-height',(c.lineHeight/100));sc('--text-align',c.textAlign);sc('--heading-align',c.textAlign==='justify'?'left':c.textAlign);sc('--content-width',c.contentWidth+'%');sc('--title-color',c.titleColor);sc('--heading-color',c.headingColor);sc('--body-color',c.bodyColor);sc('--caption-color',c.captionColor);sc('--media-radius',c.mediaRadius+'px');sc('--block-radius',c.blockRadius+'px');document.getElementById('renderSiteLogo').textContent=c.logoText;sc('--logo-size',(c.logoSize||22)+'px');document.title=c.postTitle+' — '+c.logoText;const img=document.getElementById('postHeroImg');if(img){let u=(c.heroImg||'').trim();if(u.includes('github.com')&&u.includes('/blob/'))u=u.replace('github.com','raw.githubusercontent.com').replace('/blob/','/');img.src=u||'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80';}const tg=document.getElementById('postHeroTags');if(tg){tg.innerHTML='';(c.heroTags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(tag=>{tg.insertAdjacentHTML('beforeend','<span class="post-tag-chip">'+eH(tag)+'</span>');});}}
+async function submitLeadForm(e,formElement,workerUrl,campaignSlug){e.preventDefault();const container=formElement.closest('.lead-form-wrapper');const btn=formElement.querySelector('button[type="submit"]'),msgEl=container.querySelector('.lead-msg'),resultBox=container.querySelector('.lead-result'),email=formElement.querySelector('input[type="email"]').value.trim();btn.innerHTML='<i class="fa-solid fa-circle-notch fa-spin"></i> Verifying...';btn.disabled=true;msgEl.textContent='';try{const res=await fetch(workerUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,campaign:campaignSlug})});const data=await res.json();if(data.success){formElement.style.display='none';resultBox.style.display='block';resultBox.innerHTML='<p style="color:var(--neon-blue); font-size:16px; font-weight:bold; margin-bottom:15px; font-family:var(--header-font); text-transform:uppercase;"><i class="fa-solid fa-check-circle"></i> Access Granted</p><a href="'+eH(data.downloadLink)+'" target="_blank" class="lead-dl-btn"><i class="fa-solid fa-cloud-arrow-down"></i> Download Presets</a>';}else{msgEl.textContent=data.error||'Try again.';msgEl.style.color='var(--neon-pink)';btn.innerHTML='Unlock Download';btn.disabled=false;}}catch(err){msgEl.textContent='Connection error.';msgEl.style.color='var(--neon-pink)';btn.innerHTML='Unlock Download';btn.disabled=false;}}
+async function loadComments(url,pid,cid){const c=document.getElementById(cid);if(!c)return;if(!url){c.innerHTML='<div style="color:var(--text-muted);font-size:13px;text-align:center;">Worker not set.</div>';return;}try{const r=await fetch(url+'?post='+pid);const d=await r.json();if(d.comments&&d.comments.length>0){c.innerHTML=d.comments.map(x=>'<div class="comment-bubble"><div class="comment-meta"><span class="comment-name">'+eH(x.name)+'</span><span class="comment-date">'+eH(x.date)+'</span></div><div class="comment-txt">'+eH(x.text)+'</div></div>').join('');}else{c.innerHTML='<div style="color:var(--text-muted);font-size:14px;text-align:center;">No comments yet.</div>';}}catch(e){c.innerHTML='<div style="color:var(--neon-pink);text-align:center;">Error loading.</div>';}}
+async function submitCommentForm(e,f,url,pid){e.preventDefault();const b=f.querySelector('button'),m=f.querySelector('.comment-msg'),n=f.querySelector('input[name="name"]').value.trim(),em=f.querySelector('input[name="email"]').value.trim(),tx=f.querySelector('textarea[name="comment"]').value.trim();const tk=new FormData(f).get('cf-turnstile-response')||'';if(!url){m.textContent='Worker missing';return;}if(!tk){m.textContent='Verify human';m.style.color='var(--neon-pink)';return;}b.disabled=true;b.innerHTML='Submitting...';m.textContent='';try{const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({post_id:pid,name:n,email:em,text:tx,turnstileToken:tk})});const d=await r.json();if(d.success){m.textContent='Submitted for review!';m.style.color='var(--neon-blue)';f.reset();}else{m.textContent=d.error;m.style.color='var(--neon-pink)';}}catch(e){m.textContent='Connection error.';m.style.color='var(--neon-pink)';}finally{b.disabled=false;b.innerHTML='Post Comment';if(window.turnstile)turnstile.reset();}}
+let scene,camera,renderer,mGroup,wGroup,pos,baseZ=[],lines=[],clk;
+function initThree(){const c=document.getElementById('canvas-container');if(!c)return;scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x0a001a,0.006);camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,1000);camera.position.set(0,8,40);renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});renderer.setSize(window.innerWidth,window.innerHeight);renderer.setPixelRatio(window.devicePixelRatio);c.appendChild(renderer.domElement);mGroup=new THREE.Group();scene.add(mGroup);const geo=new THREE.PlaneGeometry(300,400,80,100);geo.rotateX(-Math.PI/2);pos=geo.attributes.position;for(let i=0;i<pos.count;i++)baseZ.push(geo.attributes.position.getZ(i));const matW=new THREE.MeshBasicMaterial({color:PS.config.colorPink,wireframe:true,transparent:true,opacity:0.8});const matS=new THREE.MeshBasicMaterial({color:0x050011,transparent:true,opacity:1.0});const meshW=new THREE.Mesh(geo,matW);const meshS=new THREE.Mesh(geo,matS);meshS.position.y=-0.2;mGroup.add(meshW);mGroup.add(meshS);const sunGeo=new THREE.CircleGeometry(60,64);const sunMat=new THREE.MeshBasicMaterial({color:0xffe880});const sunMesh=new THREE.Mesh(sunGeo,sunMat);sunMesh.position.set(0,30,-180);mGroup.add(sunMesh);wGroup=new THREE.Group();wGroup.visible=false;scene.add(wGroup);for(let i=0;i<50;i++){const wg=new THREE.BufferGeometry();const wp=new Float32Array(300);const cols=new Float32Array(300);const z=-(i*2.5);for(let j=0;j<100;j++){const x=(j/100)*160-80;wp[j*3]=x;wp[j*3+1]=0;wp[j*3+2]=z;const c=new THREE.Color();c.setHSL((j/100)*0.15+0.8,1.0,0.6);cols[j*3]=c.r;cols[j*3+1]=c.g;cols[j*3+2]=c.b;}wg.setAttribute('position',new THREE.BufferAttribute(wp,3));wg.setAttribute('color',new THREE.BufferAttribute(cols,3));const l=new THREE.Line(wg,new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:0.9,linewidth:2}));lines.push({mesh:l,zIndex:i});wGroup.add(l);}wGroup.position.y=-6;clk=new THREE.Clock();if(PS.config.bgMode==='grid'){mGroup.visible=true;wGroup.visible=false;scene.fog.color.setHex(0x0a001a);}else{mGroup.visible=false;wGroup.visible=true;scene.fog.color.setHex(0x050011);}animThree();}
+function animThree(){requestAnimationFrame(animThree);if(!clk)return;const t=clk.getElapsedTime();if(PS.config.bgMode==='grid'&&pos){mGroup.children[0].material.color.set(PS.config.colorPink);for(let i=0;i<pos.count;i++){const x=pos.getX(i);const mz=baseZ[i]+t*35;const d=Math.abs(x);let h=0;if(d>15){h=Math.sin(x*0.08)*Math.sin(mz*0.05)*15+Math.sin(x*0.04)*Math.cos(mz*0.03)*10;let s=(d-15)/30;if(s>1)s=1;h=Math.max(0,h*s*2);}pos.setY(i,h);}pos.needsUpdate=true;}else if(PS.config.bgMode==='wave'&&lines){lines.forEach((item)=>{const wp=item.mesh.geometry.attributes.position;const z=-(item.zIndex*2.5);for(let j=0;j<100;j++){wp.setY(j,Math.sin(wp.getX(j)*0.08+t*2)*3+Math.cos(z*0.05-t*1.5)*4);}wp.needsUpdate=true;});}renderer.render(scene,camera);}
+window.addEventListener('resize',()=>{if(camera&&renderer){camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();renderer.setSize(window.innerWidth,window.innerHeight);}});
+document.addEventListener('DOMContentLoaded',()=>{ applyState(); initThree(); PS.blocks.forEach(b=>{ if(b.type==='comments') loadComments(b.workerUrl, b.postId, 'comments-list-'+b.id); }); if(window.turnstile&&PS.config.turnstileSiteKey){setTimeout(()=>{document.querySelectorAll('.cf-turnstile').forEach(el=>{try{turnstile.render(el);}catch(e){}})},200);} });
+</script>
+
+</body></html>
