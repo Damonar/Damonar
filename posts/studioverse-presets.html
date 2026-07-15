@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="--neon-blue: #00f0ff; --neon-pink: #ff007f; --header-font: 'Orbitron',sans-serif; --title-font: 'Orbitron',sans-serif; --body-font: 'Rajdhani',sans-serif; --eyebrow-size: 12px; --title-size: 24px; --body-size: 18px; --lead-size: 21px; --line-height: 1.54; --text-align: justify; --heading-align: left; --content-width: 100%; --title-color: #ffffff; --heading-color: #00f0ff; --body-color: #c2cbd9; --caption-color: #7d8aa0; --media-radius: 16px; --block-radius: 16px; --logo-size: 19px;"><head><link rel="preconnect" href="https://fonts.googleapis.com">
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+<title>30 Free Waves Studioverse Presets — Damon Armani</title>
+
+<link rel="preload" as="image" href="pics/surge-vol3-beat.webp" id="heroPreload">
+
+<link rel="stylesheet" media="all" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Rajdhani:wght@500;600;700&amp;display=swap">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap">
+</noscript>
+
+<style>
+:root{
+    --bg-color:#02000a;--neon-pink:#ff007f;--neon-purple:#9d00ff;--neon-blue:#00f0ff;
+    --glass-bg:rgba(255,255,255,0.03);--glass-border:rgba(255,255,255,0.08);
+    --glass-blur:10px;--block-radius:16px;--media-radius:16px;
+    --header-font:'Orbitron',sans-serif;--title-font:'Orbitron',sans-serif;--body-font:'Rajdhani',sans-serif;
+    --text-main:#f1f5f9;--text-muted:#9aa8bd;
+    --title-color:#ffffff;--body-color:#c2cbd9;--heading-color:#00f0ff;--caption-color:#7d8aa0;
+    --eyebrow-size:13px;--title-size:42px;--body-size:18px;--lead-size:21px;--logo-size:22px;
+    --content-width:100%;--line-height:1.85;--text-align:left;--heading-align:left;
+}
+/* Font Fallbacks */
+body, h1, h2, h3, p, span, a, input, button, textarea { font-family: var(--body-font), system-ui, -apple-system, sans-serif; }
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; background:var(--bg-color);}
+body{color:var(--text-main);min-height:100vh;overflow-x:hidden;position:relative}
+
+/* SVG Icons Style */
+.svg-icon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; fill: currentColor; flex-shrink: 0; }
+.fa-spin { animation: fa-spin 1.5s infinite linear; }
+@keyframes fa-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* ===== BACKGROUND LAYER ===== */
+.bg-layer{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-2;background:radial-gradient(circle at 50% 30%,#0a001a 0%,#030008 85%);}
+#canvas-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;display:block; pointer-events:none;}
+
+/* ===== HEADER / NAV ===== */
+.site-header{width:100%;padding:30px 24px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:10;max-width:1200px;margin:0 auto}
+.site-logo{font-family:var(--header-font);font-size:var(--logo-size);font-weight:900;letter-spacing:4px;text-transform:uppercase;color:#fff;text-shadow:0 0 18px rgba(0,240,255,.35);text-decoration:none}
+.back-link{display:flex;align-items:center;gap:8px;color:var(--text-muted);font-size:14px;text-decoration:none;font-weight:600;letter-spacing:.5px;transition:color .2s}
+.back-link:hover{color:var(--neon-blue)}
+
+/* ===== HERO / FEATURED IMAGE ===== */
+.post-hero{max-width:1200px;margin:10px auto 50px;padding:0 24px;position:relative;z-index:5}
+.post-hero-media{width:100%;aspect-ratio:16/7;border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6);border:1px solid rgba(0,240,255,0.12); background:#060314;}
+.post-hero-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.post-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,0,10,0) 40%,rgba(2,0,10,.85) 100%)}
+.post-hero-tagrow{position:absolute;bottom:28px;left:36px;right:36px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.post-tag-chip{font-family:var(--header-font);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:999px;background:rgba(0,240,255,0.12);border:1px solid rgba(0,240,255,0.3);color:var(--neon-blue)}
+.post-meta-row{display:flex;gap:18px;align-items:center;margin-top:18px;font-size:13px;color:var(--text-muted);flex-wrap:wrap}
+.post-meta-row span{display:flex;align-items:center;gap:6px}
+.post-meta-row i{color:var(--neon-pink)}
+
+/* ===== ARTICLE WRAPPER ===== */
+.post-article{max-width:var(--content-width);margin:0 auto;padding:0 0 80px;position:relative;z-index:5}
+.post-title-block{margin-bottom:24px;padding:0 24px}
+.post-eyebrow{font-family:var(--header-font);font-size:var(--eyebrow-size);color:var(--neon-pink);letter-spacing:4px;text-transform:uppercase;display:block;margin-bottom:14px;text-shadow:0 0 10px rgba(255,0,127,.4)}
+.post-title{font-family:var(--title-font);font-size:var(--title-size);font-weight:900;line-height:1.15;color:var(--title-color);text-transform:uppercase;margin-bottom:28px;letter-spacing:.5px}
+
+/* ===== CONTENT BLOCKS ===== */
+.content-block{text-align:var(--text-align)}
+.text-glass { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur)); border-radius: var(--block-radius); box-shadow: 0 15px 35px rgba(0,0,0,0.3); }
+.block-paragraph{font-size:var(--body-size);line-height:var(--line-height);color:var(--body-color);font-weight:500;white-space:pre-wrap}
+.block-paragraph.is-lead{font-size:var(--lead-size);color:var(--text-main);font-weight:600}
+.block-heading{font-family:var(--title-font);font-weight:800;color:var(--heading-color);text-transform:uppercase;letter-spacing:1px;margin:0 0 8px;text-align:var(--heading-align)}
+.block-image{border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid rgba(0,240,255,0.12)}
+.block-image img{width:100%;display:block;height:auto}
+.block-image-caption{font-size:13px;color:var(--caption-color);text-align:center;margin-top:10px;font-style:italic;letter-spacing:.3px}
+.block-video{border-radius:var(--media-radius);overflow:hidden;position:relative;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid rgba(0,240,255,0.12);aspect-ratio:16/9;background:#060314}
+.block-video iframe{width:100%;height:100%;border:none;display:block}
+.block-video-caption{font-size:13px;color:var(--caption-color);text-align:center;margin-top:10px;font-style:italic;letter-spacing:.3px}
+.block-highlight{background:var(--glass-bg);border:1px solid var(--glass-border);border-left:3px solid var(--neon-blue);border-radius:var(--block-radius);backdrop-filter:blur(var(--glass-blur));-webkit-backdrop-filter:blur(var(--glass-blur));position:relative}
+.block-highlight::before{content:'\201C';font-family:Georgia,serif;font-size:64px;color:rgba(0,240,255,.18);position:absolute;top:-6px;left:18px;line-height:1}
+.block-highlight p{line-height:1.6;color:var(--text-main);font-weight:600;position:relative;z-index:1;white-space:pre-wrap}
+.block-divider{display:flex;align-items:center;gap:14px;justify-content:center}
+.block-divider span{width:6px;height:6px;border-radius:50%;background:var(--neon-pink);box-shadow:0 0 10px var(--neon-pink)}
+.block-divider::before,.block-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--glass-border),transparent)}
+
+/* ===== LEAD FORM & COMMENTS ===== */
+.lead-form-input{width:100%;padding:14px 20px;background:rgba(0,0,0,0.6);border:1px solid var(--neon-blue);color:#fff;border-radius:8px;outline:none;font-size:16px;font-family:var(--body-font);transition:box-shadow 0.3s;}
+.lead-form-input:focus{box-shadow:0 0 15px rgba(0,240,255,0.3);}
+.lead-form-btn{width:100%;padding:14px 20px;background:linear-gradient(45deg, var(--neon-pink), var(--neon-purple));border:none;color:#fff;font-weight:bold;font-family:var(--header-font);font-size:14px;letter-spacing:1px;text-transform:uppercase;border-radius:8px;cursor:pointer;transition:all 0.3s;box-shadow:0 0 20px rgba(255,0,127,0.4);}
+.lead-form-btn:hover{transform:translateY(-2px);box-shadow:0 5px 25px rgba(255,0,127,0.6);}
+.lead-form-btn:disabled{opacity:0.7;cursor:not-allowed;transform:none;}
+.lead-dl-btn{display:inline-block;padding:14px 30px;background:var(--neon-blue);color:#000;text-decoration:none;font-family:var(--header-font);font-weight:900;text-transform:uppercase;border-radius:8px;box-shadow:0 0 20px rgba(0,240,255,0.4);letter-spacing:1px;transition:all 0.3s;}
+.lead-dl-btn:hover{transform:translateY(-2px);box-shadow:0 5px 25px rgba(0,240,255,0.6);color:#000;}
+
+.comment-bubble { background:rgba(0,0,0,0.3); border-left:3px solid var(--neon-blue); padding:16px; border-radius:8px; margin-bottom:12px; }
+.comment-meta { display:flex; justify-content:space-between; margin-bottom:8px; align-items:center; }
+.comment-name { font-family:var(--header-font); color:#fff; font-weight:700; font-size:15px; }
+.comment-date { font-size:12px; color:var(--text-muted); }
+.comment-txt { color:var(--body-color); line-height:1.6; font-size:15px; }
+
+/* ===== RELATED POSTS SLIDER ===== */
+.related-section{max-width:100%;margin:0 auto 60px;padding:60px 0 0;position:relative;z-index:5;border-top:1px solid var(--glass-border)}
+.related-title{font-family:var(--header-font);font-size:22px;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:36px;color:var(--text-main);padding:0 24px}
+.related-track{display:flex;gap:26px;overflow-x:auto;padding:0 24px 10px;scroll-snap-type:x mandatory}
+.related-track::-webkit-scrollbar{height:6px}
+.related-track::-webkit-scrollbar-thumb{background:var(--neon-blue);border-radius:3px}
+.related-card{flex:0 0 280px;background:rgba(4,2,18,.6);border:1px solid var(--glass-border);border-radius:var(--block-radius);overflow:hidden;transition:all .3s ease;text-decoration:none;scroll-snap-align:start;cursor:pointer;backdrop-filter:blur(5px)}
+.related-card:hover{border-color:var(--neon-blue);box-shadow:0 15px 35px rgba(0,240,255,.18);transform:translateY(-4px)}
+.related-card-media{width:100%;height:160px;background:#09051c;position:relative}
+.related-card-media img{width:100%;height:100%;object-fit:cover}
+.related-card-badge{position:absolute;top:14px;left:14px;background:var(--neon-pink);font-family:var(--header-font);font-size:9px;font-weight:900;padding:3px 9px;border-radius:4px;letter-spacing:1px;box-shadow:0 0 10px var(--neon-pink)}
+.related-card-body{padding:18px}
+.related-card-title{font-family:var(--header-font);font-size:15px;color:#fff;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.related-card-tag{color:var(--neon-blue);font-size:12px;font-weight:600;text-transform:uppercase}
+
+/* ===== FOOTER ===== */
+.post-footer{text-align:center;font-size:12px;color:var(--text-muted);padding:30px 0;font-family:var(--header-font);letter-spacing:1px;border-top:1px solid var(--glass-border)}
+
+/* ===== EDITOR PANEL ===== */
+#elementorToggle{position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:linear-gradient(135deg,var(--neon-pink),var(--neon-purple));border:none;border-radius:50%;color:#fff;font-size:24px;cursor:pointer;z-index:999;box-shadow:0 0 20px var(--neon-pink);display:flex;justify-content:center;align-items:center}
+#customizerPanel{position:fixed;top:0;right:-440px;width:420px;height:100vh;background:rgba(9,5,24,.98);border-left:2px solid var(--neon-blue);backdrop-filter:blur(25px);z-index:998;transition:right .4s cubic-bezier(.16,1,.3,1);padding:20px 16px;overflow-y:auto;box-shadow:-10px 0 40px rgba(0,0,0,.8)}
+#customizerPanel.open{right:0}
+.panel-section{margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08)}
+.panel-section h3{font-family:'Orbitron',sans-serif;font-size:11px;color:var(--neon-blue);margin-bottom:10px;letter-spacing:1px;text-transform:uppercase}
+.ctrl-group{margin-bottom:10px;display:flex;flex-direction:column;gap:4px}
+.ctrl-group label{font-size:11px;color:#cbd5e1}
+.ctrl-group input[type=range]{-webkit-appearance:none;width:100%;background:#1e1b4b;height:5px;border-radius:3px}
+.ctrl-group input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--neon-pink);cursor:pointer}
+.ctrl-group select,.ctrl-group input[type=text],.ctrl-group textarea,.ctrl-group input[type=color]{background:#1e1b4b;border:1px solid rgba(255,255,255,.1);padding:6px 10px;border-radius:6px;color:#fff;font-size:12px;width:100%}
+.ctrl-group textarea{resize:vertical;min-height:60px;line-height:1.5}
+.ctrl-group input[type=color]{padding:2px 4px;height:32px;cursor:pointer}
+.ctrl-row{display:flex;gap:8px}
+.ctrl-row .ctrl-group{flex:1;margin-bottom:0}
+.btn-action{width:100%;padding:8px;border-radius:6px;border:none;font-weight:bold;cursor:pointer;text-transform:uppercase;font-size:11px;letter-spacing:1px;margin-top:4px; display:flex; align-items:center; justify-content:center; gap:6px;}
+.btn-primary{background:var(--neon-blue);color:#000}
+.btn-success{background:var(--neon-pink);color:#fff;box-shadow:0 0 15px var(--neon-pink)}
+.btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.15)}
+.btn-danger{background:rgba(255,0,80,.12);color:#ff6699;border:1px solid rgba(255,0,80,.3)}
+.manager-card-actions{display:flex;gap:4px;flex-shrink:0}
+.manager-card-actions button{background:none;border:none;color:#fff;cursor:pointer;padding:2px;font-size:14px}
+.manager-card-actions button:hover{color:var(--neon-blue)}
+.panel-tabs{display:flex;gap:5px;margin-bottom:14px;flex-wrap:wrap}
+.panel-tab{padding:5px 9px;border-radius:5px;border:1px solid rgba(255,255,255,.12);background:transparent;color:rgba(255,255,255,.5);font-family:'Orbitron',sans-serif;font-size:9px;cursor:pointer;transition:all .2s}
+.panel-tab.active{background:var(--neon-blue);color:#000;border-color:var(--neon-blue)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.block-editor-card{background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.12);border-radius:8px;padding:10px;margin-bottom:10px}
+.block-editor-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.block-editor-type{font-family:'Orbitron',sans-serif;font-size:9px;color:var(--neon-pink);letter-spacing:1px;text-transform:uppercase; display:flex; align-items:center; gap:4px;}
+.add-block-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.add-block-btn{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:6px;padding:9px 6px;font-size:10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:all .2s}
+.add-block-btn:hover{border-color:var(--neon-blue);background:rgba(0,240,255,.06)}
+.add-block-btn svg{font-size:16px;color:var(--neon-blue)}
+.radio-pill-group{display:flex;gap:6px}
+.radio-pill{flex:1;text-align:center;padding:7px;border-radius:6px;border:1px solid rgba(255,255,255,.12);font-size:10px;cursor:pointer;color:rgba(255,255,255,.6);transition:all .2s}
+.radio-pill.active{background:var(--neon-blue);color:#000;border-color:var(--neon-blue);font-weight:700}
+
+@media(max-width:768px){
+    .post-title{font-size:calc(var(--title-size) * 0.75)}
+    .post-hero-media{aspect-ratio:4/3}
+    .related-card{flex:0 0 240px}
+}
+</style>
+<script async="" crossorigin="anonymous" src="https://challenges.cloudflare.com/turnstile/v0/api.js?_upgrade=true&amp;_cb=1784155378804"></script><script id="cf-turnstile-script" src="https://challenges.cloudflare.com/turnstile/v0/api.js" async="" defer=""></script><meta name="description" content="Download 30 free, high-quality multi-layered presets for Waves Studioverse by Damon Armani. Perfect for modern electronic music. Get instant inspiration!">
+    <link rel="canonical" href="https://damon-armani.com/posts/studioverse-presets.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="/posts/pics/favicon-32.png">
+    <link rel="apple-touch-icon" href="/posts/pics/favicon-180.png">
+    <meta property="og:title" content="30 Free Waves Studioverse Presets — Damon Armani">
+    <meta property="og:description" content="Download 30 free, high-quality multi-layered presets for Waves Studioverse by Damon Armani. Perfect for modern electronic music. Get instant inspiration!">
+    <meta property="og:image" content="https://damon-armani.com/posts/pics/studioverse-presets.webp">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Damon Armani">
+    <meta property="og:url" content="https://damon-armani.com/posts/studioverse-presets.html">
+    <meta property="article:published_time" content="2025-08-15">
+    <meta property="article:modified_time" content="2026-07-16">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="30 Free Waves Studioverse Presets — Damon Armani">
+    <meta name="twitter:description" content="Download 30 free, high-quality multi-layered presets for Waves Studioverse by Damon Armani. Perfect for modern electronic music. Get instant inspiration!">
+    <meta name="twitter:image" content="https://damon-armani.com/posts/pics/studioverse-presets.webp">
+    <meta name="twitter:site" content="@damon_armani">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"30 Free Waves Studioverse Presets","description":"Download 30 free, high-quality multi-layered presets for Waves Studioverse by Damon Armani. Perfect for modern electronic music. Get instant inspiration!","image":["https://damon-armani.com/posts/pics/studioverse-presets.webp"],"author":{"@type":"Person","name":"Damon Armani"},"publisher":{"@type":"Organization","name":"Damon Armani"},"datePublished":"2025-08-15","dateModified":"2026-07-16","mainEntityOfPage":{"@type":"WebPage","@id":"https://damon-armani.com/posts/studioverse-presets.html"}}</script></head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow-left" viewBox="0 0 448 512"><path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8 .4 34.3z"></path></symbol>
+    <symbol id="i-wave-square" viewBox="0 0 640 512"><path fill="currentColor" d="M640 64v288c0 17.67-14.33 32-32 32H416c-17.67 0-32-14.33-32-32V160h-96v288c0 17.67-14.33 32-32 32H32c-17.67 0-32-14.33-32-32V64c0-17.67 14.33-32 32-32h192c17.67 0 32 14.33 32 32v192h96V64c0-17.67 14.33-32 32-32h192c17.67 0 32 14.33 32 32z"></path></symbol>
+    <symbol id="i-calendar" viewBox="0 0 448 512"><path fill="currentColor" d="M152 64H296V24c0-13.25 10.75-24 24-24s24 10.75 24 24V64h40c35.35 0 64 28.65 64 64v320c0 35.35-28.65 64-64 64H64c-35.35 0-64-28.65-64-64V128c0-35.35 28.65-64 64-64h40V24c0-13.25 10.75-24 24-24S152 10.75 152 24V64zM48 448c0 8.836 7.164 16 16 16H384c8.836 0 16-7.164 16-16V192H48V448z"></path></symbol>
+    <symbol id="i-clock" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 464c-114.7 0-208-93.31-208-208S141.3 48 256 48s208 93.31 208 208S370.7 464 256 464zM277.3 256V128c0-11.78-9.531-21.34-21.33-21.34S234.7 116.2 234.7 128v138.7c0 5.656 2.25 11.08 6.25 15.08l85.33 85.33c4.167 4.165 9.621 6.246 15.08 6.246c12.05 0 21.34-9.815 21.34-21.34c0-5.46-2.082-10.91-6.246-15.08L277.3 256z"></path></symbol>
+    <symbol id="i-user" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256c70.7 0 128-57.31 128-128S294.7 0 224 0 96 57.31 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></symbol>
+    <symbol id="i-comments" viewBox="0 0 576 512"><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></symbol>
+    <symbol id="i-sliders" viewBox="0 0 512 512"><path fill="currentColor" d="M0 416c0 17.7 14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-246.7 0c-12.3-28.3-40.5-48-73.3-48s-61 19.7-73.3 48L32 384c-17.7 0-32 14.3-32 32zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-32.8 0-61 19.7-73.3 48L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l246.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48l54.7 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-54.7 0c-12.3-28.3-40.5-48-73.3-48zM192 96a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm-32-80c-32.8 0-61 19.7-73.3 48L32 64C14.3 64 0 78.3 0 96s14.3 32 32 32l54.7 0c12.3 28.3 40.5 48 73.3 48s61-19.7 73.3-48L480 128c17.7 0 32-14.3 32-32s-14.3-32-32-32L233.3 64C221 35.7 192.8 16 160 16z"></path></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-42.7 372.9L75.5 243.1c-4.7-4.7-4.7-12.3 0-17l17-17c4.7-4.7 12.3-4.7 17 0l112.2 112.2 240.1-240.1c4.7-4.7 12.3-4.7 17 0l17 17c4.7 4.7 4.7 12.3 0 17L230.3 380.9c-4.7 4.7-12.3 4.7-17 0z"></path></symbol>
+    <symbol id="i-download-cloud" viewBox="0 0 640 512"><path fill="currentColor" d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"></path></symbol>
+    <symbol id="i-circle-notch" viewBox="0 0 512 512"><path fill="currentColor" d="M224 32c0-17.7 14.3-32 32-32C397.4 0 512 114.6 512 256c0 17.7-14.3 32-32 32s-32-14.3-32-32C448 150 362 64 256 64c-17.7 0-32-14.3-32-32z"></path></symbol>
+    <symbol id="i-xmark" viewBox="0 0 384 512"><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></symbol>
+    <symbol id="i-trash-can" viewBox="0 0 448 512"><path fill="currentColor" d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 512 512"><path fill="currentColor" d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path></symbol>
+    <symbol id="i-upload" viewBox="0 0 512 512"><path fill="currentColor" d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64z"></path></symbol>
+    <symbol id="i-download" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h128c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V416c0-17.7 14.3-32 32-32h128c17.7 0 32-14.3 32-32s-14.3-32-32-32H64z"></path></symbol>
+    <symbol id="i-paragraph" viewBox="0 0 448 512"><path fill="currentColor" d="M192 32h192c17.7 0 32 14.3 32 32s-14.3 32-32 32H352v352c0 17.7-14.3 32-32 32s-32-14.3-32-32V96H256v352c0 17.7-14.3 32-32 32s-32-14.3-32-32V278.4c-5.7 1-11.6 1.6-17.6 1.6-61.9 0-112-50.1-112-112S130.1 56 192 56c0 0 0-24 0-24z"></path></symbol>
+    <symbol id="i-heading" viewBox="0 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96h64v320H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h160c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64V288h256v128h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h160c17.7 0 32-14.3 32-32s-14.3-32-32-32h-64V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v128H160V96h64c17.7 0 32-14.3 32-32S241.7 32 224 32H32z"></path></symbol>
+    <symbol id="i-image" viewBox="0 0 512 512"><path fill="currentColor" d="M0 96C0 60.7 28.7 32 64 32h384c35.3 0 64 28.7 64 64v320c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4S80.4 416 89.6 416h332.8c9.2 0 17.8-5.3 21.8-13.6s2.9-18.2-2.9-25.4l-117.5-174.5zM160 160c-26.5 0-48 21.5-48 48s21.5 48 48 48 48-21.5 48-48-21.5-48-48-48z"></path></symbol>
+    <symbol id="i-youtube" viewBox="0 0 576 512"><path fill="currentColor" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3-48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path></symbol>
+    <symbol id="i-soundcloud" viewBox="0 0 640 512"><path fill="currentColor" d="M118.6 309.5c-11.1-2.3-21.9-5-33.1-6.9C36 293 0 334 0 384c0 44.2 35.8 80 80 80h464c53 0 96-43 96-96 0-50.5-38.9-92.2-88.3-95.6-20.3-43.1-64.6-72.4-115.7-72.4-53.5 0-99.7 32-118 78-6.1-2.1-12.7-3.2-19.3-3.2-12.5 0-24.3 3.5-34.6 9.5-3-19.3-10.9-37.4-22.9-53.1C220.8 206 189 192 153.6 192c-15.6 0-30.8 3.5-44.5 10.3 4.2 12.6 6.5 26.2 6.5 40.2 0 24.2-6.5 46.9-17.9 66.5-.4 .8-.8 1.5-1.1 2.3zM100.8 322c3.5 8.8 5.4 18.3 5.4 28.2 0 10-1.9 19.5-5.4 28.2H64.5c-2.3-8.8-3.5-18.1-3.5-27.7 0-9.6 1.2-18.9 3.5-27.7h36.3v-1zM48 350.2c0-8 .9-15.8 2.6-23.4h22.6c-2.2 7.4-3.4 15.3-3.4 23.4s1.2 16 3.4 23.4H50.6c-1.7-7.6-2.6-15.4-2.6-23.4zM240 384H224v-64h16v64zm48 0H272v-80h16v80zm-144 0h-16v-32h16v32zm48 0h-16v-48h16v48zm144 0h-16v-96h16v96z"></path></symbol>
+    <symbol id="i-code" viewBox="0 0 640 512"><path fill="currentColor" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"></path></symbol>
+    <symbol id="i-quote-left" viewBox="0 0 448 512"><path fill="currentColor" d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V216z"></path></symbol>
+    <symbol id="i-envelope" viewBox="0 0 512 512"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"></path></symbol>
+    <symbol id="i-minus" viewBox="0 0 448 512"><path fill="currentColor" d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"></path></symbol>
+    <symbol id="i-link" viewBox="0 0 640 512"><path fill="currentColor" d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></symbol>
+  </defs>
+</svg>
+
+<div class="bg-layer"></div>
+<div id="canvas-container"></div>
+
+<header class="site-header">
+    <a href="#" class="site-logo" id="renderSiteLogo">Damon Armani</a>
+    <a href="https://damon-armani.com" class="back-link" id="renderBackLink" target="_self">
+        <svg class="svg-icon"><use href="#i-arrow-left"></use></svg> 
+        <span id="renderBackLinkText">Back to Home</span>
+    </a>
+</header>
+
+<section class="post-hero">
+    <div class="post-hero-media" id="postHeroMedia">
+        <img id="postHeroImg" src="pics/surge-vol3-beat.webp" alt="30 Free Waves Studioverse Presets by Damon Armani" fetchpriority="high" decoding="async" sizes="(max-width: 768px) 100vw, 1200px" width="1200" height="525">
+        <div class="post-hero-overlay"></div>
+        <div class="post-hero-tagrow" id="postHeroTags"><span class="post-tag-chip">Free Presets</span></div>
+    </div>
+</section>
+
+<article class="post-article">
+    <div class="post-title-block">
+        <span class="post-eyebrow" id="postEyebrow">Waves Studioverse Presets by Damon Armani</span>
+        <h1 class="post-title" id="postTitle">30 Free Waves Studioverse Presets</h1>
+        <div class="post-meta-row" id="postMetaRow"><span><svg class="svg-icon"><use href="#i-calendar"></use></svg> Aug 2025</span><span><svg class="svg-icon"><use href="#i-user"></use></svg> Damon Armani</span></div>
+    </div>
+
+    <div id="contentBlocksTrack"><div class="content-block text-glass" data-block-id="1" style="margin-top:0px; margin-bottom:55px; margin-left:0px; margin-right:0px; padding:23px 16px;"><p class="block-paragraph is-lead" style="font-size:16px;">I’m back — and as always, I’m bringing you another free preset pack!
+
+This 30-preset collection is designed exclusively for Studioverse, one of the most remarkable plugins from the legendary audio company Waves. As an independent sound designer constantly looking for innovative tools, I couldn't resist diving into this one.</p></div><div class="content-block text-glass" data-block-id="2" style="margin-top:0px; margin-bottom:35px; margin-left:0px; margin-right:0px; padding:15px 16px;"><h3 class="block-heading" style="font-size:15px;">Why Studioverse?</h3></div><div class="content-block text-glass" data-block-id="3" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 21px;"><p class="block-paragraph " style="">I decided to create presets for this plugin because it’s truly one-of-a-kind. Studioverse is a powerful ecosystem where you can combine synthesizers and effects in multi-layered setups. You can:
+
+Stack multiple synths together.
+
+Organize them dynamically by velocity or octave.
+
+Build any sound you can imagine — fast.
+
+This flexibility is exactly what I’ve always been looking for to push my sound design further.</p></div><div class="content-block text-glass" data-block-id="1784155908712" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 34px;"><h2 class="block-heading" style="font-size:20px;">About This Free Preset Pack</h2></div><div class="content-block text-glass" data-block-id="1784152370826" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 18px;"><p class="block-paragraph " style="">The goal was to create unique, multi-layered sounds that instantly inspire. In some presets, you’ll find drums, bass, leads, and arpeggios all working together — giving you an instant foundation for your next track.  
+
+Whether you’re a DJ, a music producer, or just starting your journey, this pack will add something fresh to your sound palette. And the best part? These presets are completely free — with 15 of them built entirely using the Waves Free Plugin Pack recently released by Waves.</p></div><div class="content-block text-glass" data-block-id="1783675534040" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 34px;"><h3 class="block-heading" style="font-size:17px;">Highlights:</h3></div><div class="content-block" data-block-id="1784152503449" style="margin-top:0px; margin-bottom:38px; width:100%; margin-left:auto; margin-right:auto;"><div class="block-video"><iframe title="YouTube Video Player" src="https://www.youtube-nocookie.com/embed/bs6Xl_L4YCM?rel=0&amp;modestbranding=1&amp;color=white" allowfullscreen="" loading="lazy"></iframe></div><div class="block-video-caption">StudioVerse Presets Video Promotion </div></div><div class="content-block text-glass" data-block-id="1783675568525" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 22px;"><p class="block-paragraph " style="">30 high-quality, multi-layered presets for Studioverse.
+
+Perfect for EDM, cinematic, pop, hip-hop, and more.  
+
+15 presets made entirely with the Waves Free Plugin Pack.  
+
+Instant inspiration — just load and play.</p></div><div class="content-block text-glass" data-block-id="1784152747078" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 34px;"><h2 class="block-heading" style="font-size:15px;">How to Access the Presets</h2></div><div class="content-block text-glass" data-block-id="1784156343598" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:28px 19px;"><p class="block-paragraph " style="">After installing Studioverse on your computer, you have two easy options to get my sounds:  
+
+1️⃣ Quick Search Method
+
+Open Studioverse.
+
+In the search bar, type Damon or Damon Armani (don’t press Enter — just wait a few seconds).
+
+A new panel will appear with the artist profile “Damon Armani.”
+
+Select it, and you’ll see all my designed presets ready to use.
+
+2️⃣ Direct Download Links
+I’ve provided direct links for each preset below. You can also listen to audio demos online or directly in the Studioverse UI. Click on any preset to download:</p></div><div class="content-block" data-block-id="1784152195602" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px;"><div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 30px 0;">
+    <a href="https://www.waves.com/studioverse/chain/3433ca6e-e31c-4d7d-ac39-be01a989a68f" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Scientific Pad</a>
+    <a href="https://www.waves.com/studioverse/chain/42f4d66b-4cc8-44a2-95be-97cf3abf56ab" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Robotronomy</a>
+    <a href="https://www.waves.com/studioverse/chain/ca0f0314-0328-4e68-9c94-360964267d19" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Vintage But Modern</a>
+    <a href="https://www.waves.com/studioverse/chain/07e0a00a-abf4-408a-bb58-c8a64d8795f8" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">TriPulse Arp</a>
+    <a href="https://www.waves.com/studioverse/chain/9025e1b4-0d8a-495e-865b-4e13a232a4ec" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Duby Bass</a>
+    <a href="https://www.waves.com/studioverse/chain/dda45e1f-acee-43c2-b501-fede7906d950" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Rhythm &amp; Whisper</a>
+    <a href="https://www.waves.com/studioverse/chain/1b37c559-95a1-482e-a46d-d3dddd572255" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">NeoRhodes</a>
+    <a href="https://www.waves.com/studioverse/chain/9cc4fbed-1afd-4d18-9356-b3f7f555fab6" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">PulseForge</a>
+    <a href="https://www.waves.com/studioverse/chain/4e8c71cc-d9ae-4ae4-925d-8215c1be2d1d" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Velvet Burn</a>
+    <a href="https://www.waves.com/studioverse/chain/7e347c67-e417-4c4f-b00f-3b9207695856" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">DrumThread Arp</a>
+    <a href="https://www.waves.com/studioverse/chain/4c60da63-2845-479c-99e7-b5ad053da23d" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">ArpNest</a>
+    <a href="https://www.waves.com/studioverse/chain/478896ff-6709-4356-af72-3bd2ccf08eea" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Twilight Bloom</a>
+    <a href="https://www.waves.com/studioverse/chain/601895ca-eae2-4b06-b827-2daab8f26f54" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Obscura Veil</a>
+    <a href="https://www.waves.com/studioverse/chain/44883a2c-c08b-48fe-a8f3-47f1e71d1623" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Crushframe</a>
+    <a href="https://www.waves.com/studioverse/chain/44b8aa40-e222-4e65-a583-a4dc14313bd9" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Triplume</a>
+    <a href="https://www.waves.com/studioverse/chain/930a3618-b6cd-4b54-9713-69c6d06c6f94" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Glasslines</a>
+    <a href="https://www.waves.com/studioverse/chain/0396383e-bb32-4ec5-ab03-dbf9979ded9d" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">NeuroSoul</a>
+    <a href="https://www.waves.com/studioverse/chain/b4daa650-231e-4551-8323-e1f94e2ff73e" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Silver Drift</a>
+    <a href="https://www.waves.com/studioverse/chain/73f53328-7552-4013-b86b-f457e6a7309d" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Orbit Flux</a>
+    <a href="https://www.waves.com/studioverse/chain/ae304cbd-c235-489e-b933-42395c9ba32a" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Triad Machine</a>
+    <a href="https://www.waves.com/studioverse/chain/52e2c16f-a55e-40df-a048-0093d0dbfc2c" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">MechaRoot</a>
+    <a href="https://www.waves.com/studioverse/chain/0366d053-be66-4225-b0e9-a301cbbe52c9" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Chrome Spike</a>
+    <a href="https://www.waves.com/studioverse/chain/71935933-ed91-475a-b5f5-c13aca0458b7" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">SplitFury</a>
+    <a href="https://www.waves.com/studioverse/chain/0010b2b6-3dba-41de-a200-831430e1391b" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Featherflow</a>
+    <a href="https://www.waves.com/studioverse/chain/6cbb36f4-ccb6-42cb-be60-0efa30a6ea59" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Iron Veil</a>
+    <a href="https://www.waves.com/studioverse/chain/c039b114-cd8c-4e48-b430-395bc024bd44" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">MonoDrive Bass</a>
+    <a href="https://www.waves.com/studioverse/chain/03da770c-f7da-4263-870b-0099e197d152" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Veloclaw</a>
+    <a href="https://www.waves.com/studioverse/chain/b706bad3-0691-4b41-bda8-e197e02be149" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Glitchtone Nomad</a>
+    <a href="https://www.waves.com/studioverse/chain/1b9aa289-d132-440f-a632-b4b57decd52e" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Scaleweaver</a>
+    <a href="https://www.waves.com/studioverse/chain/26edaa5f-38e8-4c43-a887-e73cef8c2471" target="_blank" rel="noopener noreferrer" style="background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;">Scalebound Engine</a>
+</div></div><div class="content-block text-glass comments-wrapper" data-block-id="1781905771754" style="margin-top:0px; margin-bottom:38px; margin-left:0px; margin-right:0px; padding:40px 40px;"><h3 class="block-heading" style="margin-bottom:24px; font-size:24px;"><svg class="svg-icon" style="margin-right:10px; color:var(--neon-blue);"><use href="#i-comments"></use></svg> Comments</h3><div class="comments-list" id="comments-list-1781905771754" style="margin-bottom:30px; display:flex; flex-direction:column;"><div style="color:var(--text-muted); font-size:14px; text-align:center;">No comments yet. Be the first to share your thoughts!</div></div><div class="comment-form-container" style="border-top:1px solid var(--glass-border); padding-top:25px;"><h4 style="font-family:var(--heading-font); color:var(--neon-pink); font-size:18px; margin-bottom:15px;">Leave a Reply</h4><form onsubmit="submitCommentForm(event, this, atob('aHR0cHM6Ly9jbW1hbi5kYW1vbmFybXVzaWMud29ya2Vycy5kZXY='), 'StudioVerse')" style="display:flex; flex-direction:column; gap:15px;"><div style="display:flex; gap:15px; flex-wrap:wrap;"><input type="text" name="name" class="lead-form-input" style="flex:1;" placeholder="Your Name" required=""><input type="email" name="email" class="lead-form-input" style="flex:1;" placeholder="Your Email (Hidden)"></div><textarea name="comment" class="lead-form-input" style="resize:vertical; min-height:100px;" placeholder="Your message..." required=""></textarea><div class="turnstile-box" style="margin:10px 0;"><div class="cf-turnstile" data-sitekey="0x4AAAAAADnkwjqyclYJRP97" data-theme="dark"></div></div><button type="submit" class="lead-form-btn" style="align-self:flex-start; max-width:200px;">Post Comment</button><div class="comment-msg" style="font-size:13px; font-weight:600; margin-top:5px;"></div></form></div></div></div>
+</article>
+
+<section class="related-section" id="relatedSection">
+    <div class="related-title">
+        <svg class="svg-icon"><use href="#i-wave-square"></use></svg> 
+        <span id="relatedTitleText">Related Presets</span>
+    </div>
+    <div class="related-track" id="relatedTrack"><a class="related-card" href="carbon-electra-2-presets.html"><div class="related-card-media"><span class="related-card-badge">News &amp; Updates </span><img src="pics/carbon-electra-2-presets.webp" width="280" height="160" alt="Carbon Electra 2" loading="lazy" decoding="async"></div><div class="related-card-body"><div class="related-card-title">Carbon Electra 2</div><div class="related-card-tag">Collaborations</div></div></a><a class="related-card" href="explorations-vol-4.html"><div class="related-card-media"><span class="related-card-badge">News &amp; Updates </span><img src="pics/explorations-vol-4.webp" width="280" height="160" alt="Explorations Vol 4" loading="lazy" decoding="async"></div><div class="related-card-body"><div class="related-card-title">Explorations Vol 4</div><div class="related-card-tag">Collaborations</div></div></a><a class="related-card" href="surge-vol3-beat.html"><div class="related-card-media"><span class="related-card-badge">News &amp; Updates </span><img src="pics/surge-vol3-beat.webp" width="280" height="160" alt="Surge Vol3 Beat" loading="lazy" decoding="async"></div><div class="related-card-body"><div class="related-card-title">Surge Vol3 Beat</div><div class="related-card-tag">Collaborations</div></div></a></div>
+</section>
+
+<p class="post-footer" id="renderFooterText">DAMON ARMANI © 2026</p>
+
+
+
+
+
+
+
+
+<script>
+const PS={"config":{"colorBlue":"#00f0ff","colorPink":"#ff007f","logoText":"Damon Armani","logoSize":"19","heroImg":"pics/surge-vol3-beat.webp","heroTags":"Free Presets","eyebrow":"Waves Studioverse Presets by Damon Armani","postTitle":"30 Free Waves Studioverse Presets","metaItems":"fa-calendar|Aug 2025, fa-user|Damon Armani","headerFont":"'Orbitron',sans-serif","titleFont":"'Orbitron',sans-serif","bodyFont":"'Rajdhani',sans-serif","titleSize":"24","bodySize":"18","leadSize":"21","lineHeight":"154","textAlign":"justify","contentWidth":100,"titleColor":"#ffffff","headingColor":"#00f0ff","bodyColor":"#c2cbd9","captionColor":"#7d8aa0","mediaRadius":16,"blockRadius":16,"bgMode":"wave","relatedTitle":"Related Presets","seoDesc":"Download 30 free, high-quality multi-layered presets for Waves Studioverse by Damon Armani. Perfect for modern electronic music. Get instant inspiration!","seoImage":"https://damon-armani.com/posts/pics/studioverse-presets.webp","turnstileSiteKey":"0x4AAAAAADnkwjqyclYJRP97","eyebrowSize":"12","footerText":"DAMON ARMANI © 2026","backLinkText":"Back to Home","backLinkUrl":"https://damon-armani.com","autoCdn":false,"heroAlt":"30 Free Waves Studioverse Presets by Damon Armani","seoUrl":"https://damon-armani.com/posts/studioverse-presets.html","seoSiteName":"Damon Armani","seoPublished":"2025-08-15","seoModified":"2026-07-16","twitterHandle":"@damon_armani","favicon32":"/posts/pics/favicon-32.png","favicon512":"/posts/pics/favicon-180.png","enableSchema":true},"blocks":[{"id":1,"type":"paragraph","lead":true,"text":"I’m back — and as always, I’m bringing you another free preset pack!\n\nThis 30-preset collection is designed exclusively for Studioverse, one of the most remarkable plugins from the legendary audio company Waves. As an independent sound designer constantly looking for innovative tools, I couldn't resist diving into this one.","mTop":0,"mBot":55,"pVer":23,"pHor":16,"fSize":16,"mLeft":0},{"id":2,"type":"heading","level":"h3","text":"Why Studioverse?","mTop":0,"mBot":35,"pVer":15,"pHor":16,"fSize":15},{"id":3,"type":"paragraph","lead":false,"text":"I decided to create presets for this plugin because it’s truly one-of-a-kind. Studioverse is a powerful ecosystem where you can combine synthesizers and effects in multi-layered setups. You can:\n\nStack multiple synths together.\n\nOrganize them dynamically by velocity or octave.\n\nBuild any sound you can imagine — fast.\n\nThis flexibility is exactly what I’ve always been looking for to push my sound design further.","mTop":0,"mBot":38,"pVer":28,"pHor":21},{"id":1784155908712,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h2","fSize":20,"pVer":28,"pHor":34,"text":"About This Free Preset Pack"},{"id":1784152370826,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":18,"text":"The goal was to create unique, multi-layered sounds that instantly inspire. In some presets, you’ll find drums, bass, leads, and arpeggios all working together — giving you an instant foundation for your next track.  \n\nWhether you’re a DJ, a music producer, or just starting your journey, this pack will add something fresh to your sound palette. And the best part? These presets are completely free — with 15 of them built entirely using the Waves Free Plugin Pack recently released by Waves."},{"id":1783675534040,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h3","fSize":17,"pVer":28,"pHor":34,"text":"Highlights:"},{"id":1784152503449,"type":"video","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"imgWidth":100,"vId":"bs6Xl_L4YCM","caption":"StudioVerse Presets Video Promotion "},{"id":1783675568525,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":22,"text":"30 high-quality, multi-layered presets for Studioverse.\n\nPerfect for EDM, cinematic, pop, hip-hop, and more.  \n\n15 presets made entirely with the Waves Free Plugin Pack.  \n\nInstant inspiration — just load and play."},{"id":1784152747078,"type":"heading","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"level":"h2","fSize":15,"pVer":28,"pHor":34,"text":"How to Access the Presets"},{"id":1784156343598,"type":"paragraph","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"lead":false,"pVer":28,"pHor":19,"text":"After installing Studioverse on your computer, you have two easy options to get my sounds:  \n\n1️⃣ Quick Search Method\n\nOpen Studioverse.\n\nIn the search bar, type Damon or Damon Armani (don’t press Enter — just wait a few seconds).\n\nA new panel will appear with the artist profile “Damon Armani.”\n\nSelect it, and you’ll see all my designed presets ready to use.\n\n2️⃣ Direct Download Links\nI’ve provided direct links for each preset below. You can also listen to audio demos online or directly in the Studioverse UI. Click on any preset to download:"},{"id":1784152195602,"type":"html","mTop":0,"mBot":38,"mLeft":0,"mRight":0,"rawHtml":"<div style=\"display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 30px 0;\">\n    <a href=\"https://www.waves.com/studioverse/chain/3433ca6e-e31c-4d7d-ac39-be01a989a68f\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Scientific Pad</a>\n    <a href=\"https://www.waves.com/studioverse/chain/42f4d66b-4cc8-44a2-95be-97cf3abf56ab\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Robotronomy</a>\n    <a href=\"https://www.waves.com/studioverse/chain/ca0f0314-0328-4e68-9c94-360964267d19\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Vintage But Modern</a>\n    <a href=\"https://www.waves.com/studioverse/chain/07e0a00a-abf4-408a-bb58-c8a64d8795f8\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">TriPulse Arp</a>\n    <a href=\"https://www.waves.com/studioverse/chain/9025e1b4-0d8a-495e-865b-4e13a232a4ec\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Duby Bass</a>\n    <a href=\"https://www.waves.com/studioverse/chain/dda45e1f-acee-43c2-b501-fede7906d950\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Rhythm & Whisper</a>\n    <a href=\"https://www.waves.com/studioverse/chain/1b37c559-95a1-482e-a46d-d3dddd572255\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">NeoRhodes</a>\n    <a href=\"https://www.waves.com/studioverse/chain/9cc4fbed-1afd-4d18-9356-b3f7f555fab6\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">PulseForge</a>\n    <a href=\"https://www.waves.com/studioverse/chain/4e8c71cc-d9ae-4ae4-925d-8215c1be2d1d\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Velvet Burn</a>\n    <a href=\"https://www.waves.com/studioverse/chain/7e347c67-e417-4c4f-b00f-3b9207695856\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">DrumThread Arp</a>\n    <a href=\"https://www.waves.com/studioverse/chain/4c60da63-2845-479c-99e7-b5ad053da23d\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">ArpNest</a>\n    <a href=\"https://www.waves.com/studioverse/chain/478896ff-6709-4356-af72-3bd2ccf08eea\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Twilight Bloom</a>\n    <a href=\"https://www.waves.com/studioverse/chain/601895ca-eae2-4b06-b827-2daab8f26f54\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Obscura Veil</a>\n    <a href=\"https://www.waves.com/studioverse/chain/44883a2c-c08b-48fe-a8f3-47f1e71d1623\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Crushframe</a>\n    <a href=\"https://www.waves.com/studioverse/chain/44b8aa40-e222-4e65-a583-a4dc14313bd9\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Triplume</a>\n    <a href=\"https://www.waves.com/studioverse/chain/930a3618-b6cd-4b54-9713-69c6d06c6f94\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Glasslines</a>\n    <a href=\"https://www.waves.com/studioverse/chain/0396383e-bb32-4ec5-ab03-dbf9979ded9d\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">NeuroSoul</a>\n    <a href=\"https://www.waves.com/studioverse/chain/b4daa650-231e-4551-8323-e1f94e2ff73e\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Silver Drift</a>\n    <a href=\"https://www.waves.com/studioverse/chain/73f53328-7552-4013-b86b-f457e6a7309d\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Orbit Flux</a>\n    <a href=\"https://www.waves.com/studioverse/chain/ae304cbd-c235-489e-b933-42395c9ba32a\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Triad Machine</a>\n    <a href=\"https://www.waves.com/studioverse/chain/52e2c16f-a55e-40df-a048-0093d0dbfc2c\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">MechaRoot</a>\n    <a href=\"https://www.waves.com/studioverse/chain/0366d053-be66-4225-b0e9-a301cbbe52c9\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Chrome Spike</a>\n    <a href=\"https://www.waves.com/studioverse/chain/71935933-ed91-475a-b5f5-c13aca0458b7\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">SplitFury</a>\n    <a href=\"https://www.waves.com/studioverse/chain/0010b2b6-3dba-41de-a200-831430e1391b\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Featherflow</a>\n    <a href=\"https://www.waves.com/studioverse/chain/6cbb36f4-ccb6-42cb-be60-0efa30a6ea59\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Iron Veil</a>\n    <a href=\"https://www.waves.com/studioverse/chain/c039b114-cd8c-4e48-b430-395bc024bd44\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">MonoDrive Bass</a>\n    <a href=\"https://www.waves.com/studioverse/chain/03da770c-f7da-4263-870b-0099e197d152\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Veloclaw</a>\n    <a href=\"https://www.waves.com/studioverse/chain/b706bad3-0691-4b41-bda8-e197e02be149\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Glitchtone Nomad</a>\n    <a href=\"https://www.waves.com/studioverse/chain/1b9aa289-d132-440f-a632-b4b57decd52e\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Scaleweaver</a>\n    <a href=\"https://www.waves.com/studioverse/chain/26edaa5f-38e8-4c43-a887-e73cef8c2471\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"background-color: #2b2b2b; color: #ffffff; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; border-radius: 6px; transition: background-color 0.3s ease;\">Scalebound Engine</a>\n</div>"},{"id":1781905771754,"type":"comments","mTop":0,"mBot":38,"sectionTitle":"Comments","postId":"StudioVerse","workerUrl":"aHR0cHM6Ly9jbW1hbi5kYW1vbmFybXVzaWMud29ya2Vycy5kZXY=","pVer":40,"pHor":40}],"related":[{"id":1782331762439,"title":"Carbon Electra 2","tag":"Collaborations","img":"pics/carbon-electra-2-presets.webp","badge":"News & Updates ","link":"carbon-electra-2-presets.html"},{"id":1782331834126,"title":"Explorations Vol 4","tag":"Collaborations","img":"pics/explorations-vol-4.webp","badge":"News & Updates ","link":"explorations-vol-4.html"},{"id":1782331881310,"title":"Surge Vol3 Beat","tag":"Collaborations","img":"pics/surge-vol3-beat.webp","badge":"News & Updates ","link":"surge-vol3-beat.html"}]};
+function svgIcon(name, extraStyle){ return '<svg class="svg-icon"'+(extraStyle?' style="'+extraStyle+'"':'')+'><use href="#i-'+name+'"></use></svg>'; }
+function autoResizeImageUrl(url, width) { if (!url || !url.startsWith('http')) return url; return 'https://wsrv.nl/?url='+encodeURIComponent(url)+'&w='+width+'&output=webp'; }
+function generateResponsiveImageSrc(url, isAutoCDN) { let finalUrl = url.trim(); if (finalUrl.includes('github.com') && finalUrl.includes('/blob/')) { finalUrl = finalUrl.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/'); } if (isAutoCDN && finalUrl.startsWith('http')) { const src = autoResizeImageUrl(finalUrl, 1200); const srcset = autoResizeImageUrl(finalUrl, 400)+' 400w, '+autoResizeImageUrl(finalUrl, 800)+' 800w, '+autoResizeImageUrl(finalUrl, 1200)+' 1200w'; return { src, srcset }; } return { src: finalUrl, srcset: '' }; }
+function sc(n,v){document.documentElement.style.setProperty(n,v);}
+function eH(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function applyState(){const c=PS.config;sc('--neon-blue',c.colorBlue);sc('--neon-pink',c.colorPink);sc('--header-font',c.headerFont);sc('--title-font',c.titleFont);sc('--body-font',c.bodyFont);sc('--eyebrow-size',(c.eyebrowSize||13)+'px');sc('--title-size',c.titleSize+'px');sc('--body-size',c.bodySize+'px');sc('--lead-size',c.leadSize+'px');sc('--line-height',(c.lineHeight/100));sc('--text-align',c.textAlign);sc('--heading-align',c.textAlign==='justify'?'left':c.textAlign);sc('--content-width',c.contentWidth+'%');sc('--title-color',c.titleColor);sc('--heading-color',c.headingColor);sc('--body-color',c.bodyColor);sc('--caption-color',c.captionColor);sc('--media-radius',c.mediaRadius+'px');sc('--block-radius',c.blockRadius+'px');document.getElementById('renderSiteLogo').textContent=c.logoText;sc('--logo-size',(c.logoSize||22)+'px');document.title=c.postTitle+' — '+c.logoText;const fEl=document.getElementById('renderFooterText');if(fEl){fEl.textContent=c.footerText||'DAMON ARMANI ANALOG ARCHITECTURE © 2026';}const blEl=document.getElementById('renderBackLink');if(blEl){blEl.href=c.backLinkUrl||'https://damon-armani.com';}const blTxtEl=document.getElementById('renderBackLinkText');if(blTxtEl){blTxtEl.textContent=c.backLinkText||'Back to Home';}const img=document.getElementById('postHeroImg');const preload=document.getElementById('heroPreload');if(img){const url=(c.heroImg||'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80').trim();const imgData = generateResponsiveImageSrc(url, c.autoCdn);img.src=imgData.src;if(preload)preload.href=imgData.src;if(imgData.srcset){img.srcset=imgData.srcset;if(preload)preload.imageSrcset=imgData.srcset;}else{img.removeAttribute('srcset');if(preload)preload.removeAttribute('imageSrcset');}img.setAttribute('width','1200');img.setAttribute('height','525');img.alt=c.heroAlt?c.heroAlt:(c.postTitle||'')+' Presets by '+(c.logoText||'Damon Armani');}const tg=document.getElementById('postHeroTags');if(tg){tg.innerHTML='';(c.heroTags||'').split(',').map(t=>t.trim()).filter(Boolean).forEach(tag=>{tg.insertAdjacentHTML('beforeend','<span class="post-tag-chip">'+eH(tag)+'</span>');});}}
+async function submitLeadForm(e,formElement,workerUrl,campaignSlug){e.preventDefault();const container=formElement.closest('.lead-form-wrapper');const btn=formElement.querySelector('button[type="submit"]'),msgEl=container.querySelector('.lead-msg'),resultBox=container.querySelector('.lead-result'),email=formElement.querySelector('input[type="email"]').value.trim();btn.innerHTML=svgIcon('circle-notch','animation:fa-spin 1.5s infinite linear;')+' Verifying...';btn.disabled=true;msgEl.textContent='';try{const res=await fetch(workerUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,campaign:campaignSlug})});const data=await res.json();if(data.success){formElement.style.display='none';resultBox.style.display='block';resultBox.innerHTML='<p style="color:var(--neon-blue); font-size:16px; font-weight:bold; margin-bottom:15px; font-family:var(--header-font); text-transform:uppercase;">'+svgIcon('check-circle')+' Access Granted</p><a href="'+eH(data.downloadLink)+'" target="_blank" class="lead-dl-btn">'+svgIcon('download-cloud')+' Download Presets</a>';}else{msgEl.textContent=data.error||'Try again.';msgEl.style.color='var(--neon-pink)';btn.innerHTML='Unlock Download';btn.disabled=false;}}catch(err){msgEl.textContent='Connection error.';msgEl.style.color='var(--neon-pink)';btn.innerHTML='Unlock Download';btn.disabled=false;}}
+async function loadComments(url,pid,cid){const c=document.getElementById(cid);if(!c)return;if(!url){c.innerHTML='<div style="color:var(--text-muted);font-size:13px;text-align:center;">Worker not set.</div>';return;}try{const r=await fetch(url+'?post='+pid);const d=await r.json();if(d.comments&&d.comments.length>0){c.innerHTML=d.comments.map(x=>'<div class="comment-bubble"><div class="comment-meta"><span class="comment-name">'+eH(x.name)+'</span><span class="comment-date">'+eH(x.date)+'</span></div><div class="comment-txt">'+eH(x.text)+'</div></div>').join('');}else{c.innerHTML='<div style="color:var(--text-muted);font-size:14px;text-align:center;">No comments yet.</div>';}}catch(e){c.innerHTML='<div style="color:var(--neon-pink);text-align:center;">Error loading.</div>';}}
+async function submitCommentForm(e,f,url,pid){e.preventDefault();const b=f.querySelector('button'),m=f.querySelector('.comment-msg'),n=f.querySelector('input[name="name"]').value.trim(),em=f.querySelector('input[name="email"]').value.trim(),tx=f.querySelector('textarea[name="comment"]').value.trim();const tk=new FormData(f).get('cf-turnstile-response')||'';if(!url){m.textContent='Worker missing';return;}if(!tk&&PS.config.turnstileSiteKey){m.textContent='Verify human';m.style.color='var(--neon-pink)';return;}b.disabled=true;b.innerHTML=svgIcon('circle-notch','animation:fa-spin 1.5s infinite linear;')+' Submitting...';m.textContent='';try{const r=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({post_id:pid,name:n,email:em,text:tx,turnstileToken:tk})});const d=await r.json();if(d.success){m.textContent='Submitted for review!';m.style.color='var(--neon-blue)';f.reset();}else{m.textContent=d.error;m.style.color='var(--neon-pink)';}}catch(e){m.textContent='Connection error.';m.style.color='var(--neon-pink)';}finally{b.disabled=false;b.innerHTML='Post Comment';if(window.turnstile)turnstile.reset();}}
+
+function ensureTurnstileScript() { if (document.getElementById('cf-turnstile-script')) return; if (!PS.config.turnstileSiteKey) return; const hasComments = PS.blocks.some(b => b.type === 'comments'); if (!hasComments) return; const s = document.createElement('script'); s.id = 'cf-turnstile-script'; s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'; s.async = true; s.defer = true; document.head.appendChild(s); }
+
+// VANILLA JS BACKGROUND (PERFORMANCE OPTIMIZED)
+let bgCanvas,bgCtx,cw,ch,animId;
+function initBg(){
+    const c=document.getElementById('canvas-container');if(!c)return;
+    c.innerHTML='<canvas id="bgCanvas" style="display:block;width:100%;height:100%;"></canvas>';
+    bgCanvas=document.getElementById('bgCanvas');bgCtx=bgCanvas.getContext('2d',{alpha:false});
+    window.addEventListener('resize',rsz);rsz();
+    if ('requestIdleCallback' in window) { window.requestIdleCallback(() => { animBg(); }); } else { setTimeout(() => { animBg(); }, 300); }
+}
+function rsz(){cw=bgCanvas.width=window.innerWidth;ch=bgCanvas.height=window.innerHeight;}
+function animBg(time){
+    animId=requestAnimationFrame(animBg);
+    if(document.hidden)return;
+    let t=(time||performance.now())*0.001;
+    bgCtx.fillStyle=PS.config.bgMode==='grid'?'#0a001a':'#050011';
+    bgCtx.fillRect(0,0,cw,ch);
+
+    if(PS.config.bgMode==='grid'){
+        const cx=cw/2,hz=ch*0.45;
+        const sr=Math.min(cw*0.25,120);
+        let grad=bgCtx.createLinearGradient(0,hz-sr,0,hz);
+        grad.addColorStop(0,'#ffe880');grad.addColorStop(1,'#ff007f');
+        bgCtx.fillStyle=grad;
+        bgCtx.beginPath();bgCtx.arc(cx,hz,sr,Math.PI,0);bgCtx.fill();
+        bgCtx.fillStyle='#0a001a';bgCtx.fillRect(0,hz,cw,ch-hz);
+        
+        bgCtx.lineWidth=1.5;
+        let gGrad=bgCtx.createLinearGradient(0,hz,0,ch);
+        gGrad.addColorStop(0,'rgba(255, 0, 127, 0.0)');
+        gGrad.addColorStop(0.3,PS.config.colorPink);
+        gGrad.addColorStop(1,PS.config.colorPink);
+        bgCtx.strokeStyle=gGrad;
+        bgCtx.beginPath();
+        for(let i=-40;i<=40;i++){bgCtx.moveTo(cx,hz);bgCtx.lineTo(cx+(i*cw*0.05),ch);}
+        
+        let sp=1.5,ph=(t*sp)%1,ln=25;
+        for(let i=0;i<ln;i++){
+            let z=(i+ph)/ln;let yd=Math.pow(z,2.5)*(ch-hz);let yp=hz+yd;
+            bgCtx.moveTo(0,yp);bgCtx.lineTo(cw,yp);
+        }
+        bgCtx.stroke();
+    }else{
+        bgCtx.lineWidth=2;
+        let wCount=18;
+        for(let i=0;i<wCount;i++){
+            bgCtx.beginPath();let op=1-(i/wCount);
+            bgCtx.strokeStyle=PS.config.colorBlue;bgCtx.globalAlpha=op*0.8;
+            let yb=ch*0.45+i*22;
+            for(let x=0;x<=cw;x+=15){
+                let y=yb+Math.sin(x*0.008+t*2.5+i*0.4)*45+Math.cos(x*0.015-t*1.5)*15;
+                if(x===0)bgCtx.moveTo(x,y);else bgCtx.lineTo(x,y);
+            }
+            bgCtx.stroke();
+        }
+        bgCtx.globalAlpha=1.0;
+    }
+}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&!animId)animBg(performance.now());});
+document.addEventListener('DOMContentLoaded',()=>{ applyState(); ensureTurnstileScript(); initBg(); PS.blocks.forEach(b=>{if(b.type==='comments'){const w=b.workerUrl?atob(b.workerUrl):'';loadComments(w,b.postId,'comments-list-'+b.id);}});if(window.turnstile&&PS.config.turnstileSiteKey){setTimeout(()=>{document.querySelectorAll('.cf-turnstile').forEach(el=>{try{turnstile.render(el);}catch(e){}})},200);} });
+</script>
+</body></html>
